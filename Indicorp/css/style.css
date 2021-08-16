@@ -18,20 +18,22 @@ body {
 .hero {
     height: 924px;
     padding-bottom: 32px;
+    margin: 0 auto;
 }
 
 .hero__background {
     height: 793px;
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    padding: 104px 197px 0;
 }
 
-
-/* поменять на 80px, когда добавим nav */
-
 .content {
-    padding: 184px 197px 80px;
+    display: flex;
+    flex-direction: column;
+    width: 1046px;
+    padding: 80px 0;
 }
 
 .hero__title {
