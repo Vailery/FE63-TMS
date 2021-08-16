@@ -16,12 +16,13 @@ body {
 /* Hero section */
 
 .hero {
-    height: 800px;
+    height: 924px;
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1440px 793px;
     padding-top: 184px;
     padding-left: 197px;
+    padding-bottom: 32px;
 }
 
 .hero__title {
@@ -56,6 +57,33 @@ body {
     margin-right: 10px;
 }
 
+.hero__cards {
+    display: flex;
+    width: 1050px;
+    padding: 80px 0;
+    justify-content: space-between;
+}
+
+.hero__cards .card {
+    width: 328px;
+    height: 210px;
+    background: #FFFFFF;
+    padding: 35px 30px;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+
+.hero__cards .card img {
+    margin-bottom: 10px;
+}
+
+.hero__cards .card h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #252B42;
+    margin-bottom: 10px;
+}
+
 
 /* Features section */
 
@@ -83,6 +111,7 @@ body {
 
 .features__title p,
 .advices__title p,
+.hero__cards .card p,
 .advices__cards .card p {
     font-weight: 500;
     font-size: 14px;
@@ -132,6 +161,9 @@ body {
     text-align: center;
     color: #737373;
 }
+
+
+/* Advices section */
 
 .advices {
     height: 699px;
