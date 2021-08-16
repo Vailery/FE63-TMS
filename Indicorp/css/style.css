@@ -17,12 +17,21 @@ body {
 
 .hero {
     height: 924px;
+    padding-bottom: 32px;
+}
+
+.hero__background {
+    height: 793px;
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
-    background-size: 1440px 793px;
-    padding-top: 184px;
-    padding-left: 197px;
-    padding-bottom: 32px;
+    background-size: contain;
+}
+
+
+/* поменять на 80px, когда добавим nav */
+
+.content {
+    padding: 184px 197px 80px;
 }
 
 .hero__title {
@@ -59,9 +68,9 @@ body {
 
 .hero__cards {
     display: flex;
-    width: 1050px;
-    padding: 80px 0;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
 }
 
 .hero__cards .card {
