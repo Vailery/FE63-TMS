@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+    font-style: normal;
+}
+
+
+/* Hero section */
+
+.hero {
+    height: 800px;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 184px;
+    padding-left: 197px;
+}
+
+.hero__title {
+    margin-bottom: 35px;
+}
+
+.hero__title h1 {
+    margin-bottom: 35px;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 80px;
+    color: #252B42;
+}
+
+.hero__title p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #737373;
+}
+
+.hero__buttons button {
+    background: transparent;
+    border: 1px solid #00A0C1;
+    border-radius: 37px;
+    padding: 10px 36px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #00A0C1;
+    margin-right: 10px;
+}
