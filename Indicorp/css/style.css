@@ -29,6 +29,9 @@ body {
     padding: 104px 197px 0;
 }
 
+
+/* мы flex еще не проходили, но я хотела центрировать элементы, как в макете */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -129,9 +132,6 @@ body {
     line-height: 20px;
     color: #737373;
 }
-
-
-/* мы flex еще не проходили, но я хотела центрировать элементы, как в макете */
 
 .features__cards,
 .advices__cards {
