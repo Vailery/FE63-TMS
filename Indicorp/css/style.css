@@ -28,10 +28,13 @@ body {
     display: flex;
     align-items: center;
     padding: 36px 0;
+    position: fixed;
+    padding-left: 195px;
 }
 
 .header__logo {
     margin-right: 117px;
+    cursor: pointer;
 }
 
 .header__menu>ul {
@@ -53,16 +56,16 @@ body {
 }
 
 .header__button {
-    position: absolute;
+    position: fixed;
     right: 0;
     padding-right: 45px;
+    cursor: pointer;
 }
 
 
 /* Hero section */
 
 .hero {
-    height: 924px;
     padding-bottom: 32px;
     margin: 0 auto;
 }
@@ -72,14 +75,17 @@ body {
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 104px 197px 0;
+}
+
+.hero .container {
+    flex-direction: column;
+    padding: 80px 0;
+    padding-top: 184px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    width: 1046px;
-    padding: 80px 0;
+    width: 509px;
+    padding-bottom: 80px;
 }
 
 .hero__title {
@@ -99,6 +105,7 @@ body {
     font-size: 20px;
     line-height: 30px;
     color: #737373;
+    padding-right: 133px;
 }
 
 .hero__buttons button {
@@ -115,16 +122,20 @@ body {
     cursor: pointer;
 }
 
+.hero__buttons button:hover {
+    color: #FFFFFF;
+    background: #FFA62B;
+    border: 1px solid #FFA62B;
+}
+
 .hero__cards {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 80px;
 }
 
 .hero__cards .card {
-    width: 328px;
-    height: 210px;
+    flex-basis: 328px;
     background: #FFFFFF;
     padding: 35px 30px;
     box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
@@ -139,8 +150,27 @@ body {
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #252B42;
     margin-bottom: 10px;
+    color: #252B42;
+}
+
+.hero__cards .card p {
+    padding-right: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
+}
+
+.hero__cards .card:hover,
+.hero__cards .card:hover h3,
+.hero__cards .card:hover p {
+    background: #00A0C1;
+    color: #FFFFFF;
+}
+
+.hero__cards .card:hover img {
+    filter: brightness(0) invert(1);
 }
 
 
@@ -170,7 +200,6 @@ body {
 
 .features__title p,
 .advices__title p,
-.hero__cards .card p,
 .advices__cards .card p {
     font-weight: 500;
     font-size: 14px;
