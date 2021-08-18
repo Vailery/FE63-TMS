@@ -17,7 +17,7 @@ body {
 .container {
     width: 100%;
     max-width: 1050px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 10px;
 }
 
@@ -66,7 +66,7 @@ body {
 /* Hero section */
 
 .hero {
-    padding-bottom: 32px;
+    padding-bottom: 131px;
     margin: 0 auto;
 }
 
@@ -178,9 +178,6 @@ body {
 
 .features,
 .advices {
-    height: 526px;
-    width: 1050px;
-    margin: 0 auto;
     padding: 80px 0;
 }
 
@@ -207,6 +204,11 @@ body {
     color: #737373;
 }
 
+.features__title p {
+    width: 511px;
+    margin: 0 auto;
+}
+
 .features__cards,
 .advices__cards {
     display: flex;
@@ -216,12 +218,10 @@ body {
 
 .features__cards .card,
 .advices__cards .card {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 230px;
-    height: 209px;
+    flex-basis: 230px;
     padding: 30px 30px;
     background: #FFFFFF;
 }
@@ -250,17 +250,18 @@ body {
 
 /* Advices section */
 
-.advices {
-    height: 699px;
-}
-
 .advices__title {
     text-align: center;
     margin: 45px 0;
 }
 
+.advices__title p {
+    width: 470px;
+    margin: 0 auto;
+}
+
 .advices__cards .card {
-    height: 341px;
+    align-self: stretch;
     padding: 0;
 }
 
@@ -275,6 +276,5 @@ body {
 }
 
 .advices__cards .card img {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
