@@ -288,7 +288,7 @@ body {
 /* About section */
 
 .about {
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     padding: 100px 0;
 }
 
@@ -352,4 +352,16 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #737373;
+}
+
+.clients {
+    background-color: #FAFAFA;
+}
+
+.clients__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
 }
