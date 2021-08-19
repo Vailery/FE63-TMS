@@ -309,6 +309,7 @@ body {
 }
 
 .video {
+    position: relative;
     padding-right: 121.5px;
 }
 
@@ -318,7 +319,7 @@ body {
 .video .play__btn {
     position: absolute;
     margin-top: 172px;
-    left: 446.5px;
+    left: 250px;
 }
 
 .info .info__title {
@@ -353,6 +354,9 @@ body {
     line-height: 24px;
     color: #737373;
 }
+
+
+/* Clients section */
 
 .clients {
     background-color: #FAFAFA;
