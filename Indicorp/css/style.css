@@ -187,7 +187,9 @@ body {
 }
 
 .features__title h2,
-.advices__title h2 {
+.advices__title h2,
+.about__title h2,
+.info__title h2 {
     font-weight: bold;
     font-size: 40px;
     line-height: 57px;
@@ -197,14 +199,17 @@ body {
 
 .features__title p,
 .advices__title p,
-.advices__cards .card p {
+.about__title p,
+.advices__cards .card p,
+.info__title p {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     color: #737373;
 }
 
-.features__title p {
+.features__title p,
+.about__title p {
     width: 511px;
     margin: 0 auto;
 }
@@ -277,4 +282,74 @@ body {
 
 .advices__cards .card img {
     margin-top: auto;
+}
+
+
+/* About section */
+
+.about {
+    background: #FFFFFF;
+    padding: 100px 0;
+}
+
+.about__title {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.about__title h2 {
+    max-width: 511px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.main__content {
+    display: flex;
+    align-items: flex-end;
+}
+
+.video {
+    padding-right: 121.5px;
+}
+
+
+/* как лучше сделать эту кнопку? */
+
+.video .play__btn {
+    position: absolute;
+    margin-top: 172px;
+    left: 446.5px;
+}
+
+.info .info__title {
+    padding: 20px 0;
+    width: 330px;
+    margin-bottom: 30px;
+}
+
+.info .info__card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info .card1 {
+    margin-bottom: 30px;
+}
+
+.info__card img {
+    padding-right: 20px;
+}
+
+.card__info h5 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #252B42;
+}
+
+.card__info h6 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737373;
 }
