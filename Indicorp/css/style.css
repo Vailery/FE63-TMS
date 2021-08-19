@@ -320,6 +320,7 @@ body {
     position: absolute;
     margin-top: 172px;
     left: 250px;
+    cursor: pointer;
 }
 
 .info .info__title {
