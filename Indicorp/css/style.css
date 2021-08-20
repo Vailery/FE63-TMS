@@ -25,11 +25,14 @@ body {
 /* Header */
 
 .header {
-    display: flex;
-    align-items: center;
     padding: 36px 0;
     position: fixed;
-    padding-left: 195px;
+    width: 100%;
+}
+
+.header .wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
@@ -56,9 +59,10 @@ body {
 }
 
 .header__button {
-    position: fixed;
-    right: 0;
-    padding-right: 45px;
+    margin-left: auto;
+}
+
+.header__button button {
     cursor: pointer;
 }
 
