@@ -51,6 +51,8 @@ body {
 }
 
 .header__menu>ul>li>a {
+    position: relative;
+    padding: 6px 0;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -58,12 +60,56 @@ body {
     color: #737373;
 }
 
-.header__button {
-    margin-left: auto;
+.header__menu>ul>li>a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #00A0C1;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
 }
 
-.header__button button {
+.header__menu>ul>li>a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.header__button {
+    margin-left: auto;
     cursor: pointer;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+    height: 3px;
+    background: #252B42;
+}
+
+.bar:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    width: 24px;
+}
+
+.bar {
+    position: relative;
+    width: 19px;
+}
+
+.bar:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 12px;
 }
 
 
@@ -88,7 +134,7 @@ body {
 }
 
 .content {
-    width: 509px;
+    max-width: 509px;
     padding-bottom: 80px;
 }
 
@@ -174,7 +220,7 @@ body {
 }
 
 .hero__cards .card:hover img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 
@@ -214,7 +260,7 @@ body {
 
 .features__title p,
 .about__title p {
-    width: 511px;
+    max-width: 511px;
     margin: 0 auto;
 }
 
@@ -265,7 +311,7 @@ body {
 }
 
 .advices__title p {
-    width: 470px;
+    max-width: 470px;
     margin: 0 auto;
 }
 
@@ -314,7 +360,6 @@ body {
 
 .video {
     position: relative;
-    padding-right: 121.5px;
 }
 
 
@@ -322,14 +367,34 @@ body {
 
 .video .play__btn {
     position: absolute;
-    margin-top: 172px;
-    left: 250px;
+    width: 97.6px;
+    height: 98.4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: 34.8px 36.8px;
+    background: #00A0C1;
+}
+
+.video .play__btn::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left: 25px solid #FFFFFF;
+}
+
+.info {
+    padding-left: 121.5px;
 }
 
 .info .info__title {
     padding: 20px 0;
-    width: 330px;
+    max-width: 330px;
     margin-bottom: 30px;
 }
 
