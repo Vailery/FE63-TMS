@@ -11,6 +11,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    font-weight: normal;
     background-color: #FAFAFA;
 }
 
@@ -85,13 +86,13 @@ body {
 }
 
 .bar,
-.bar:after,
-.bar:before {
+.bar::after,
+.bar::before {
     height: 3px;
     background: #252B42;
 }
 
-.bar:before {
+.bar::before {
     content: "";
     position: absolute;
     right: 0;
@@ -104,7 +105,7 @@ body {
     width: 19px;
 }
 
-.bar:after {
+.bar::after {
     content: "";
     position: absolute;
     right: 0;
@@ -388,6 +389,14 @@ body {
     border-left: 25px solid #FFFFFF;
 }
 
+.video .play__btn:active {
+    transform: translate(50%, 50%);
+}
+
+.video .play__btn:hover {
+    background: #16697A;
+}
+
 .info {
     padding-left: 121.5px;
 }
@@ -429,7 +438,8 @@ body {
 /* Clients section */
 
 .clients {
-    background-color: #FAFAFA;
+    background: linear-gradient(to bottom, #FAFAFA 78%, #252B42 22%);
+    /* background-color: #FAFAFA; */
 }
 
 .clients__list {
@@ -438,4 +448,63 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 50px 0;
+}
+
+.subscribe {
+    padding: 20px 32px;
+}
+
+.subscribe__form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px 0px;
+    background: #16697A;
+    border-radius: 2px;
+}
+
+
+/* можно ли указывать width y input */
+
+.subscribe__form label h3 {
+    max-width: 258px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.input__form {
+    position: relative;
+}
+
+.subscribe__form input[type="email"] {
+    width: 450px;
+    padding: 15px 0 15px 20px;
+    background: #F9F9F9;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+
+.subscribe__form input::placeholder {
+    font-size: 14px;
+    line-height: 28px;
+    color: #737373;
+}
+
+.subscribe__form input[type="button"] {
+    position: absolute;
+    right: 0;
+    background: #FFA62B;
+    border: 1px solid #E6E6E6;
+    border-radius: 0px 5px 5px 0px;
+    padding: 15px 22.5px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.subscribe__form input[type="button"]:hover {
+    background: #00A0C1;
 }
