@@ -15,6 +15,11 @@ body {
     background-color: #FAFAFA;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     width: 100%;
     max-width: 1050px;
@@ -26,9 +31,9 @@ body {
 /* Header */
 
 .header {
-    padding: 36px 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
+    padding: 36px 0;
 }
 
 .header .wrapper {
@@ -85,13 +90,6 @@ body {
     cursor: pointer;
 }
 
-.bar,
-.bar::after,
-.bar::before {
-    height: 3px;
-    background: #252B42;
-}
-
 .bar::before {
     content: "";
     position: absolute;
@@ -111,6 +109,13 @@ body {
     right: 0;
     top: 6px;
     width: 12px;
+}
+
+.bar,
+.bar::after,
+.bar::before {
+    height: 3px;
+    background: #252B42;
 }
 
 
@@ -193,7 +198,7 @@ body {
     cursor: pointer;
 }
 
-.hero__cards .card img {
+.hero__cards .card svg {
     margin-bottom: 10px;
 }
 
@@ -221,8 +226,9 @@ body {
     color: #FFFFFF;
 }
 
-.hero__cards .card:hover img {
-    filter: brightness(0) invert(1) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.hero__cards .card:hover svg {
+    fill: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 
@@ -368,9 +374,6 @@ body {
     position: relative;
 }
 
-
-/* как лучше сделать эту кнопку? */
-
 .video .play__btn {
     position: absolute;
     width: 97.6px;
@@ -470,11 +473,9 @@ body {
     border-radius: 2px;
 }
 
-
-/* можно ли указывать width y input */
-
-.subscribe__form label h3 {
+.subscribe__form label {
     max-width: 258px;
+    width: 100%;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
@@ -483,14 +484,20 @@ body {
 
 .input__form {
     position: relative;
+    max-width: 450px;
+    width: 100%;
 }
 
 .subscribe__form input[type="email"] {
-    width: 450px;
+    width: 100%;
     padding: 15px 0 15px 20px;
     background: #F9F9F9;
     border: 1px solid #E6E6E6;
     border-radius: 5px;
+}
+
+.subscribe__form input:focus-visible {
+    outline: none;
 }
 
 .subscribe__form input::placeholder {
@@ -535,27 +542,63 @@ body {
     align-items: center;
 }
 
-.contact__cards .card {
+.contact__cards>.card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-basis: 328px;
     padding: 50px 40px;
     background: #FFFFFF;
-    transition: all 0.9s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
+}
+
+.contact__cards>.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #252B42;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
 }
 
 .contact__cards .card .description {
     padding: 15px 0;
+    text-align: center;
 }
 
-.contact__cards .card .description h6 {
+.contact__cards .card .description a {
+    position: relative;
+    text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     text-align: center;
     color: #252B42;
+}
+
+.contact__cards .card .description a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.contact__cards .card .description a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .contact__cards .card h5 {
@@ -574,30 +617,45 @@ body {
     cursor: pointer;
 }
 
-.contact__cards .card:hover {
-    background: #252B42;
-    padding: 80px 40px;
+.contact__cards>.card:hover {
+    z-index: 1;
 }
 
-.contact__cards .card:hover img {
-    filter: brightness(0) invert(1) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.contact__cards>.card:hover::before {
+    opacity: 1;
 }
 
-.contact__cards .card:hover .description h6,
-.contact__cards .card:hover h5 {
+.contact__cards .card:hover svg {
+    fill: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 1;
+}
+
+.contact__cards>.card:hover>div {
+    z-index: 1;
+}
+
+.contact__cards>.card:hover>.description>a {
     color: #FFFFFF;
+}
+
+.contact__cards>.card:hover h5 {
+    color: #FFFFFF;
+    z-index: 1;
 }
 
 .contact__cards .card:hover button {
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     background: #252B42;
+    z-index: 1;
 }
 
 .contact__cards .card button:hover {
     border: 1px solid #FFA62B;
     background: #FFA62B;
     color: #FFFFFF;
+    z-index: 1;
 }
 
 
@@ -646,11 +704,12 @@ body {
     justify-content: space-between;
 }
 
-.footer__links .info__links ul {
+.footer__links .info__content ul {
     padding-right: 30px;
 }
 
-.footer__links .info__links ul li {
+.footer__links .info__content ul li,
+.footer__links .info__content h5 {
     display: flex;
     list-style: none;
     color: #FFFFFF;
@@ -660,7 +719,11 @@ body {
     padding-bottom: 10px;
 }
 
-.footer__links .info__links ul li a {
+.footer__links .info__content h5 {
+    padding-bottom: 20px;
+}
+
+.footer__links .info__content ul li a {
     position: relative;
     text-decoration: none;
     color: #FFFFFF;
@@ -669,7 +732,7 @@ body {
     line-height: 24px;
 }
 
-.footer__links .info__links ul li a::before {
+.footer__links .info__content ul li a::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -683,16 +746,12 @@ body {
     transition: transform 0.4s ease;
 }
 
-.footer__links .info__links ul li a:hover::before {
+.footer__links .info__content ul li a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.footer__links .info__links ul li:first-child {
-    padding-bottom: 20px;
-}
-
-.footer__links .info__links ul li img {
+.footer__links .info__content ul li img {
     padding-right: 10px;
 }
 
@@ -719,4 +778,44 @@ body {
 
 .social__media ul li {
     padding-left: 20px;
+}
+
+.top-btn {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #16697A;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
+    transition: all .8s;
+}
+
+.top-btn img {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    transition: all .8s;
+}
+
+.top-btn:hover {
+    background-color: #0f4853;
+    animation-duration: 3s;
+    animation-name: top-btn;
+}
+
+.top-btn:hover img {
+    margin-top: 5px;
+}
+
+@keyframes top-btn {
+    0% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 40px;
+    }
 }
