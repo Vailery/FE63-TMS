@@ -540,6 +540,7 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .contact__cards>.card {
