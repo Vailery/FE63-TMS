@@ -847,6 +847,42 @@ img {
     .container {
         max-width: 416px;
     }
+    /* Header */
+    .header {
+        position: relative;
+        padding: 36px 0 0 0;
+        background: #F6F6F6;
+    }
+    .header .wrapper {
+        flex-direction: column;
+    }
+    .header__logo {
+        align-self: flex-start;
+        padding-left: 36px;
+    }
+    .header .header__menu {
+        order: 1;
+    }
+    .header__menu>ul {
+        flex-direction: column;
+        padding: 97px 0;
+    }
+    .header__menu>ul>li>a {
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .header__menu>ul>li {
+        margin-right: 0;
+    }
+    .header__menu>ul>li:not(:last-child) {
+        padding-bottom: 30px;
+    }
+    .bar,
+    .bar::after,
+    .bar::before {
+        background: #737373;
+    }
     /* Hero section */
     .hero {
         padding-bottom: 0;
