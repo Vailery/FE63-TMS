@@ -85,37 +85,19 @@ img {
     transform-origin: left;
 }
 
-.header__button {
+.header__buttons {
+    display: flex;
+    align-items: center;
     margin-left: auto;
     cursor: pointer;
 }
 
-.bar::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 6px;
-    width: 24px;
+.header__buttons a {
+    text-decoration: none;
 }
 
-.bar {
-    position: relative;
-    width: 19px;
-}
-
-.bar::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 6px;
-    width: 12px;
-}
-
-.bar,
-.bar::after,
-.bar::before {
-    height: 3px;
-    background: #252B42;
+.header__buttons a:not(:last-child) {
+    padding-right: 24px;
 }
 
 
@@ -878,10 +860,12 @@ img {
     .header__menu>ul>li:not(:last-child) {
         padding-bottom: 30px;
     }
-    .bar,
-    .bar::after,
-    .bar::before {
-        background: #737373;
+    .header__buttons {
+        position: absolute;
+        right: 39px;
+    }
+    .header__buttons svg {
+        fill: #737373;
     }
     /* Hero section */
     .hero {
