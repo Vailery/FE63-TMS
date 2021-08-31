@@ -100,6 +100,10 @@ img {
     padding-right: 24px;
 }
 
+.header__buttons a:hover svg {
+    fill: #00A0C1;
+}
+
 
 /* Hero section */
 
@@ -1047,7 +1051,7 @@ img {
         padding-bottom: 30px;
     }
     .footer__sites {
-        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
     .info__sites {
         flex-direction: column;
