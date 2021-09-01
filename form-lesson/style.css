@@ -70,6 +70,17 @@ body {
     margin-bottom: 60px;
 }
 
+.contact__form::before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #FD8C00;
+    border-radius: 50%;
+    transform: translate(340%, -50%);
+    z-index: -1;
+}
+
 .contact__form__info {
     margin-bottom: 28px;
 }
@@ -157,6 +168,17 @@ body {
 
 .social__info {
     margin-bottom: 72px;
+}
+
+.social__info::before {
+    content: '';
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    background: #FD8C00;
+    border-radius: 50%;
+    transform: translate(-330%, 130%);
+    z-index: -1;
 }
 
 .social__info p {
