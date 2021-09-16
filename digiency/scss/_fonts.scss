@@ -1,0 +1,57 @@
+// Poppins
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../fonts/Poppins/Poppins-Light.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins/Poppins-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins/Poppins-Medium.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins/Poppins-Bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Work-sans
+@font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('../fonts/Work_Sans/WorkSans-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans-Medium';
+    src: url('../fonts/Work_Sans/WorkSans-Medium.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url('../fonts/Work_Sans/WorkSans-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+}

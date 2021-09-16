@@ -1,0 +1,25 @@
+// colors
+$orange: #FF5300;
+$beige: #FFF7F4;
+$black: #373737;
+$dark: #18191A;
+$dark-second: #242526;
+$dark-third: #3A3B3C;
+$gray: #7B7B7B;
+$white: #FFFFFF;
+// typography
+$fz-b: 48px;
+$fz-h2: 39.06px;
+$fz-h3: 31.25px;
+$fz-h4: 25px;
+$fz-h5: 20px;
+$fz-h6: 16px;
+$fz-s: 12.8px;
+// mixins
+@mixin font($font, $fz, $fw, $line, $color) {
+    font-family: $font;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $line;
+    color: $color;
+}
