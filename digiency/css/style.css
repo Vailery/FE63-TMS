@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,9 +30,15 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  height: 100%;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 1rem;
+}
+
+.container--fluid {
+  padding: 0;
+  max-width: 1920px;
 }
 
 @font-face {
@@ -263,4 +274,206 @@ img {
 
 .orange-block:hover .work__images__info {
   opacity: 1;
+}
+
+.lesson {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.lesson__title {
+  position: relative;
+  margin-bottom: 50px;
+  font-family: "WorkSans-SemiBold";
+  font-size: 39.06px;
+  font-weight: 600;
+  line-height: 123.6%;
+  color: #373737;
+}
+
+.lesson__title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 5px);
+          transform: translate(-50%, 5px);
+  width: 10%;
+  height: 3px;
+  background-color: #dc143c;
+}
+
+.lesson__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lesson__cards__item {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  max-width: 250px;
+  padding: 20px 40px;
+}
+
+.lesson__cards .item__person {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.lesson__cards .item__work {
+  font-family: "WorkSans-Regular";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150.6%;
+  color: #dc143c;
+  margin-bottom: 5px;
+}
+
+.lesson__cards .item__name {
+  font-family: "WorkSans-Medium";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 123.6%;
+  color: #373737;
+  margin-bottom: 15px;
+}
+
+.lesson__cards .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lesson__cards .social__item {
+  border-radius: 50%;
+  border: 1px solid #7a7a7a;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.lesson__cards .social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.lesson__cards .social__item a {
+  display: contents;
+}
+
+@media (max-width: 767px) {
+  .lesson__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lesson__cards__item {
+    margin-bottom: 20px;
+  }
+}
+
+.hero {
+  padding: 108px 0 105px;
+}
+
+.hero__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero__title h1 {
+  padding-bottom: 22px;
+  font-family: PT Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 120%;
+  text-align: center;
+  color: #212121;
+}
+
+.hero__title p {
+  padding-bottom: 58px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: #757575;
+}
+
+.hero__title .btn {
+  position: relative;
+  background: #FF6A00;
+  padding: 14px 28px;
+  border-radius: 80px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  border: 0;
+  color: #FFFFFF;
+}
+
+.hero__title .btn--camera {
+  position: relative;
+  padding-left: 50px;
+}
+
+.hero__title .btn--camera::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/svg/camera.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.images .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images .items .item:not(:last-child) {
+  margin-right: 1rem;
 }

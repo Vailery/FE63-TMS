@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,7 +29,12 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    height: 100%;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 1rem;
+    &--fluid {
+        padding: 0;
+        max-width: 1920px;
+    }
 }
